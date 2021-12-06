@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шлях у світ аніме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark.css" id="theme-link">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <div class="navbar container">
+            <!-- <a href="/">
+                    <img src="img/logo.png" alt="logo">
+                </a> -->
+            <nav class="nav">
+                <!-- <button class="m-menu"><svg width="15" height="7" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                            <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                            <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+                        </svg>
+                    </button> -->
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link">Головна</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Шлях у світ аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="best_anime.html" class="menu-link">Найкращі аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Цікаве про аніме</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Світла темна -->
+            <label for="toggle" id="theme-button">
+                <input type="checkbox" />
+            
+                <svg viewBox="0 0 100 45" width="400" height="180">
+                    <defs>
+                        <!-- rectangle used for the background and re-used in the clip and mask elements -->
+                        <rect id="background" x="0" y="0" width="90" height="40" rx="20"></rect>
+            
+                        <!-- clip cutting out the elements exceeding the rounded rectangle -->
+                        <clipPath id="clip">
+                            <use href="#background"></use>
+                        </clipPath>
+            
+                        <!-- for the light variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-light" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#8bc8f2" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- filter applied to (a copy of) the sun to blur the edges -->
+                        <filter id="blur-light">
+                            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        </filter>
+            
+                        <!-- pattern for the waves -->
+                        <pattern id="pattern-light" width="0.1" height="1" viewBox="0 0 10 45">
+                            <path fill="#40b5f8" d="M 0 0 a 6 6 0 0 0 10 0 v 45 h -10 z"></path>
+                        </pattern>
+            
+            
+                        <!-- for the dark variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-dark" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#1F2241" offset="0"></stop>
+                            <stop stop-color="#7D59DF" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- gradient used for the the mask
+                                    the idea is to have the mask use the [#000-#fff] gradient to progressively hide the shapes as they approach the bottom
+                                -->
+                        <linearGradient id="gradient-mask" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#000" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- mask to conceal the stars at the bottom of the toggle -->
+                        <mask id="mask-dark">
+                            <use fill="url(#gradient-mask)" href="#background"></use>
+                        </mask>
+            
+                        <!-- gradients for the moon and craters -->
+                        <radialGradient id="gradient-moon">
+                            <stop stop-color="#fdfdfd" offset="0.7"></stop>
+                            <stop stop-color="#e2e2e2" offset="1"></stop>
+                        </radialGradient>
+            
+                        <radialGradient id="gradient-crater">
+                            <stop stop-color="#e0e0e0" offset="0"></stop>
+                            <stop stop-color="#d9d9d9" offset="1"></stop>
+                        </radialGradient>
+            
+                        <!-- pattern for the stars -->
+                        <pattern id="pattern-dark" width="0.2" height="1" viewBox="0 0 20 45">
+                            <path fill="#fff" d="M 2 5 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 16 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 16 27 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 38 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                        </pattern>
+                    </defs>
+            
+                    <!-- actual graphics
+                                the idea is to include the elements for the light variant on top of the dark counterpart and change the opacity when the input is toggled
+                                ! beside changing the opacity of the .light elements the transition also affects the position of the sun/moon and of the patterns
+                            -->
+                    <g transform="translate(5 2.5)">
+                        <g clip-path="url(#clip)">
+                            <g class="dark">
+                                <use fill="url(#gradient-dark)" href="#background"></use>
+                                <!-- translate the stars above the toggle
+                                        ! the change in y scale allows to transition the stars with a faster pace (see the CSS)
+                                        -->
+                                <g class="background" transform="translate(0 -40) scale(1 0.4)">
+                                    <rect transform="translate(-40 0) rotate(4)" fill="url(#pattern-dark)" x="0" y="0" width="100"
+                                        height="45"></rect>
+                                </g>
+                                <use mask="url(#mask-dark)" fill="url(#gradient-dark)" href="#background"></use>
+                            </g>
+                            <g class="light">
+                                <use fill="url(#gradient-light)" href="#background"></use>
+                                <!-- translate the waves above the toggle and reset their position with an opposite translation
+                                        by translating the first group to 0 (alongside the stars) the waves are pushed below
+                                        -->
+                                <g class="background" transform="translate(-30 -20)">
+                                    <g transform="translate(30 20)">
+                                        <rect fill="url(#pattern-light)" x="-5" y="27.5" width="100" height="45"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+            
+                    <g transform="translate(77.5 22.5)">
+                        <!-- translate this group to move the sun/moon to the right -->
+                        <g class="translate" transform="translate(-55)">
+                            <!-- rotate this group to rotate the moon -->
+                            <g class="rotate" transform="rotate(-100)">
+                                <g class="dark">
+                                    <circle fill="url(#gradient-moon)" cx="0" cy="0" r="20.5"></circle>
+                                    <g transform="translate(-8 -7.5)">
+                                        <ellipse transform="rotate(-30)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="4" ry="3"></ellipse>
+                                    </g>
+                                    <g transform="translate(11 5)">
+                                        <ellipse fill="url(#gradient-crater)" stroke="#d5d5d5" stroke-width="0.2" cx="0" cy="0"
+                                            rx="3.85" ry="4"></ellipse>
+                                    </g>
+                                    <g transform="translate(-6 12)">
+                                        <ellipse transform="rotate(-10)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="2" ry="1.75"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                            <g class="light">
+                                <circle fill="#FFD21F" cx="0" cy="0" r="21" filter="url(#blur-light)"></circle>
+                                <circle fill="#FFD21F" cx="0" cy="0" r="20.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <!--Світла темна -->
+        </div>
+        <div class="name container">
+            <h1>All about anime</h1>
+        </div>
+        <p class="container p">Бути героєм - значить перевершити самого себе</p>
+        <p class="container p1">аніме "Моя геройська академія"</p>
+    </header>
+    <!--HEADER-->
+    <main class="container">
+        <div class="about_anime">
+            <div class="four">
+                <h2>З чого почати шлях у світ аніме?</h2>
+            </div>
+            <p>
+                Для того, щоб почати дивитись аніме потрібно обрати жанр, який вам підхлодить.
+            </p>
+            <p>
+                Жодна анімація в світі не ділить свою аудиторію так, як аніме. Кожен творець аніме-серіалу чітко знає, якої
+                статі буде
+                його глядач, скільки йому буде років і що приблизно він чекає від перегляду. Тому аніме ділиться на
+                <i>кодомо</i> - діти від
+                6-10 років, <i>седзе</i> для дівчаток-підлітків, де багато романтики і взагалі людських відносин, <i>сенен</i>
+                для
+                хлопчиків-підлітків, де багато екшену, суперництва і гумору, а прекрасна дама маячить десь на периферії . А
+                також на
+                більш реалістичні <i>дзеса</i> про сімейні стосунки - для молодих жінок, і повні психологізму похмурі бойовики
+                <i>сейн</i> для молодих
+                чоловіків.
+            </p>
+            <div class="manga scale">
+                <img src="../img/way_genre.jpg" alt="wat_genre" class="scale">
+            </div>
+            <p>
+                Кількість жанрів в аніме перевершує усі можливі межі. А різноманітність сюжетів і персонажів змушує тільки
+                позаздрити
+                могутньої і невичерпною фантазії японських аніматорів. Крім жанрів, що вже стали класичними, таких як: фентезі,
+                наукова
+                фантастика, космічна опера, романтика, містика, бойовик, детектив та інше, трапляються і
+                істинно японські. Наприклад, жанр <i>«меха»</i> , що є відгомоном японського мілітаризму. Тут борються роботи
+                або люди,
+                ув'язнені в костюми «роботів-машин».
+            </p>
+            <br>
+            <div class="row">
+                <div class="col-8">
+                    <p>
+                        Або <i>«добуцо»</i> , аніме про людськоподобних пушистих істот - <i>«нэко»</i>,<i>«кіцуне»</i>,
+                        <i>«усагі»</i> (з
+                        сімей кошачих, лисих, заячих). Не
+                        обошлось і без восточних єдиноборств: жанри самурайського боєвика та боєві мистецтва, в основному, це -
+                        сьогодні,
+                        для
+                        мальчиків. У пам'яті об увлеченні «вражескіми» коміксами родився жанр <i>«сентай»</i> - японська версія
+                        американських
+                        супергероїв. Жанр <i>«монстр»</i> , де часто чарівні, але надзвичайно здатні створювати воле людини між
+                        собою, а
+                        таким монстрам належить знаменитий Пікачу із серіалу аніме «Покемон».
+                    </p>
+                </div>
+                <div class="col-4">
+                    <div class="manga">
+                        <img src="../img/pokemon_logo.png" alt="pokemon">
+                    </div>
+                </div>
+                <p>
+                    Або жанр «махо-сьодзьо» про дівчат-чарівниць, до якого належить популярний в кінці 90-х, аніме-серіал
+                    «Красуня-воїн
+                    Сейлор Мун». Дуже улюблені японською анімацією і старі добрі жанри «кіберпанк», «стімпанк», «апокаліптика» і
+                    «постапокаліптика».
+                </p>
+                <br>
+                <p>
+                    Талановитих авторів у аніме теж дуже багато, серед них трапляються і великі, наприклад, все той же родоначальник
+                    аніме
+                    Тезука Осаму, справжній майстер Такахата Ісао, або більш сучасні видатні автори аніме - Макото Сінкай, Мамору
+                    Хосода,
+                    Масаакі Юаса і інші. Але слава як мінімум одного з них вже облетіла весь світ. Його ім'я Хаяо Міядзакі, і для
+                    багатьох
+                    знайомство з японським аніме починається з мультфільмів цього режисера і художника-мультиплікатора. У 2003-му
+                    його
+                    аніме-фільм «Віднесені примарами» отримав «Оскар», роком раніше - «Золотого ведмедя» на Берлінале.
+                </p>
+                <div class="manga scale">
+                    <img src="../img/haio.png" alt="world" class="scale">
+                    <figcaption>Казковий світ Хаяо Міядзакі</figcaption>
+                </div>
+                <p>
+                    Він - володар «Золотого лева» Венеції за внесок у світовий кінематограф і Почесною премії «Оскар». Географія
+                    його
+                    перемог очевидна, його мультфільми «Відьмина служба доставки», «Ходячий замок», «Небесний замок Лапута», «Вітер
+                    міцнішає» і багато інших улюблені мільйонами, а його студія «Ghibli» - справжнє місце паломництва шанувальників
+                    його
+                    творчості і аніме.
+                </p>
+        </div>
+        <a href="#" id="toTop">
+            <svg width="10pt" height="10pt" viewBox="0 0 630 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <g>
+                        <path
+                            d="M489.229,442.468L254.563,37.135c-3.797-6.592-14.677-6.592-18.453,0L1.443,442.468c-1.92,3.307-1.92,7.36-0.021,10.667
+                			c1.92,3.307,5.44,5.333,9.259,5.333h469.333c3.819,0,7.339-2.027,9.259-5.333C491.128,449.849,491.128,445.775,489.229,442.468z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/script2.js"></script>
+    <footer>
+        <div class="container">&#169; Nikita Zhuravel, Lviv 2021</div>
+    </footer>
+</body>
+</html>

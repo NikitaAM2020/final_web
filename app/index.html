@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about anime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/dark.css" id="theme-link">
+</head>
+<body>
+    <!--HEADER-->
+    <header  class="header">
+        <div class="navbar container">
+            <!-- <a href="/">
+                <img src="img/logo.png" alt="logo">
+            </a> -->
+            <nav class="nav">
+                <!-- <button class="m-menu"><svg width="15" height="7" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                        <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                        <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+                    </svg>
+                </button> -->
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Головна</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="html/way_anime.html" class="menu-link">Шлях у світ аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="html/best_anime.html" class="menu-link">Найкращі аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="html/facts_anume.html" class="menu-link">Цікаве про аніме</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Світла темна -->
+            <label for="toggle" id="theme-button">
+                <input type="checkbox" />
+            
+                <svg viewBox="0 0 100 45" width="400" height="180">
+                    <defs>
+                        <!-- rectangle used for the background and re-used in the clip and mask elements -->
+                        <rect id="background" x="0" y="0" width="90" height="40" rx="20"></rect>
+            
+                        <!-- clip cutting out the elements exceeding the rounded rectangle -->
+                        <clipPath id="clip">
+                            <use href="#background"></use>
+                        </clipPath>
+            
+                        <!-- for the light variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-light" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#8bc8f2" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- filter applied to (a copy of) the sun to blur the edges -->
+                        <filter id="blur-light">
+                            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        </filter>
+            
+                        <!-- pattern for the waves -->
+                        <pattern id="pattern-light" width="0.1" height="1" viewBox="0 0 10 45">
+                            <path fill="#40b5f8" d="M 0 0 a 6 6 0 0 0 10 0 v 45 h -10 z"></path>
+                        </pattern>
+            
+            
+                        <!-- for the dark variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-dark" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#1F2241" offset="0"></stop>
+                            <stop stop-color="#7D59DF" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- gradient used for the the mask
+                        the idea is to have the mask use the [#000-#fff] gradient to progressively hide the shapes as they approach the bottom
+                    -->
+                        <linearGradient id="gradient-mask" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#000" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- mask to conceal the stars at the bottom of the toggle -->
+                        <mask id="mask-dark">
+                            <use fill="url(#gradient-mask)" href="#background"></use>
+                        </mask>
+            
+                        <!-- gradients for the moon and craters -->
+                        <radialGradient id="gradient-moon">
+                            <stop stop-color="#fdfdfd" offset="0.7"></stop>
+                            <stop stop-color="#e2e2e2" offset="1"></stop>
+                        </radialGradient>
+            
+                        <radialGradient id="gradient-crater">
+                            <stop stop-color="#e0e0e0" offset="0"></stop>
+                            <stop stop-color="#d9d9d9" offset="1"></stop>
+                        </radialGradient>
+            
+                        <!-- pattern for the stars -->
+                        <pattern id="pattern-dark" width="0.2" height="1" viewBox="0 0 20 45">
+                            <path fill="#fff" d="M 2 5 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 16 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 16 27 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 38 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                        </pattern>
+                    </defs>
+            
+                    <!-- actual graphics
+                    the idea is to include the elements for the light variant on top of the dark counterpart and change the opacity when the input is toggled
+                    ! beside changing the opacity of the .light elements the transition also affects the position of the sun/moon and of the patterns
+                -->
+                    <g transform="translate(5 2.5)">
+                        <g clip-path="url(#clip)">
+                            <g class="dark">
+                                <use fill="url(#gradient-dark)" href="#background"></use>
+                                <!-- translate the stars above the toggle
+                            ! the change in y scale allows to transition the stars with a faster pace (see the CSS)
+                            -->
+                                <g class="background" transform="translate(0 -40) scale(1 0.4)">
+                                    <rect transform="translate(-40 0) rotate(4)" fill="url(#pattern-dark)" x="0" y="0" width="100"
+                                        height="45"></rect>
+                                </g>
+                                <use mask="url(#mask-dark)" fill="url(#gradient-dark)" href="#background"></use>
+                            </g>
+                            <g class="light">
+                                <use fill="url(#gradient-light)" href="#background"></use>
+                                <!-- translate the waves above the toggle and reset their position with an opposite translation
+                            by translating the first group to 0 (alongside the stars) the waves are pushed below
+                            -->
+                                <g class="background" transform="translate(-30 -20)">
+                                    <g transform="translate(30 20)">
+                                        <rect fill="url(#pattern-light)" x="-5" y="27.5" width="100" height="45"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+            
+                    <g transform="translate(77.5 22.5)">
+                        <!-- translate this group to move the sun/moon to the right -->
+                        <g class="translate" transform="translate(-55)">
+                            <!-- rotate this group to rotate the moon -->
+                            <g class="rotate" transform="rotate(-100)">
+                                <g class="dark">
+                                    <circle fill="url(#gradient-moon)" cx="0" cy="0" r="20.5"></circle>
+                                    <g transform="translate(-8 -7.5)">
+                                        <ellipse transform="rotate(-30)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="4" ry="3"></ellipse>
+                                    </g>
+                                    <g transform="translate(11 5)">
+                                        <ellipse fill="url(#gradient-crater)" stroke="#d5d5d5" stroke-width="0.2" cx="0" cy="0"
+                                            rx="3.85" ry="4"></ellipse>
+                                    </g>
+                                    <g transform="translate(-6 12)">
+                                        <ellipse transform="rotate(-10)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="2" ry="1.75"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                            <g class="light">
+                                <circle fill="#FFD21F" cx="0" cy="0" r="21" filter="url(#blur-light)"></circle>
+                                <circle fill="#FFD21F" cx="0" cy="0" r="20.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            <!--Світла темна -->
+        </div>
+       
+        <div class="name container"><h1>All about anime</h1></div>
+        <p class="container p">Якось і ти знайдеш своє щастя</p>
+        <p class="container p1">аніме "Твоє ім'я"</p>
+    </header>
+    <!--HEADER-->
+    <main class="container">
+        <div class="about_anime container">
+            <div class="four">
+                <h2>Що таке аніме?</h2>
+            </div>
+            <p>
+                Всі ми знаємо, що таке анімація, тобто мультфільми. Однак аніме - це не просто анімація, придумана в Японії, це
+                цілий світ, який включає в себе величезну кількість жанрів і стилів. Він тісно переплітається з японської коміксової
+                культурою і складається з мільйонів відданих фанатів. Розібратися в законах цього світу не так-то просто, але ми
+                спробуємо.
+            </p>
+            <p>
+                Величезний всесвіт аніме з'явилася саме з манги - японських коміксів. Термін <i>«манга»</i> вперше згадується в
+                1814-му році
+                знаменитим графіком Хокусай Кацусика, що буквально означає <i>«дивні (або веселі) картинки, гротески»</i> .
+            </p>
+            <p>
+                Розвитку манги сприяв військовий уряд Японії, що побачив у цій масовій культурі важливий інструмент впливу. Але
+                остаточно поширення манги сталося після II Світової війни, коли Японія була окупована американськими військами,
+                і
+                японцям нічого не залишалося, як читати американські комікси. Японці швидко адаптували сюжети і формат
+                американських
+                коміксів під себе, додавши в них мінімалістську естетику, характерну для японської традиційної графіки. А далі
+                великий
+                <i>«манґака»</i> (так називається той, хто малює мангу) Тезука Осаму зробив справжню революцію в світі манги,
+                зробивши її
+                флагманом японської поп-культури.
+            </p>
+            <p>
+                Два важливих факти: по-перше, мангу в Японії читають абсолютно всі, у японських коміксів найбільша вікова
+                категорія,
+                приблизно до 45 років. І по-друге, манга дуже рідко малюється в кольорі, вона - чорно-біла.
+            </p>
+            <br>
+            <div class="manga container scale">
+                <img src="img/example_manga.png" alt="example_manga" class="scale">
+                <figcaption>Приклад сторінки з манги "Астробой"</figcaption>
+            </div>
+            <br>
+            <p>
+                І все ж аніме - це далеко не екранізація манги, хоча аж до 1970-х років японці і називали те, що ми зараз
+                вважаємо
+                «аніме», - «манга-ейга», тобто «кіно-комікси». Перші мультфільми стали з'являтися в Країні висхідного сонця в
+                1917-му
+                році ХХ століття, і, звичайно, до своїх оригінальних нащадків їм було далеко. І тут знову не обійшлося без
+                Тезука Осаму,
+                Уолта Діснея японської анімації. Він запропонував не конкурувати з американськими повнометражними мультфільмами,
+                а
+                зосередити увагу на ТВ-серіалах, орієнтованих саме на японців. Ця зосередженість на власній специфічної культурі
+                і
+                пояснює одне з частих визначень аніме - анімація, зроблена в Японії і розрахована на японську аудиторію.
+            </p>
+            <div class="container video">
+                <span>
+                    Трейлер аніме-серіалу «Могутній атом», він же «Астробой» (1980)
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/4oUiTC3jC6Q" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen title="Трейлер аніме-серіалу «Могутній атом», він же «Астробой» (1980)">
+                    </iframe>
+                </div>
+                
+            </div>
+            <p>
+                Аніме-серіал Тезука Осаму «Могутній Атом» (1963), або «Астробой», найбільш яскраво висловив майбутні канони
+                аніме. Як і
+                манга, він був чорно-білим, його міні-серії були об'єднані єдиним мета-сюжетом, і він використовував техніку
+                <i>«обмеженою анімації»</i> . Така техніка була продиктована необхідністю економії: кількість кадрів зменшувалася,
+                зате
+                фон і персонажі
+                виконувалися найбільш детально, широко використовувалися стоп-кадри і флешбеки.
+            </p>
+        </div>
+        <a href="#" id="toTop">
+            <svg width="10pt" height="10pt" viewBox="0 0 630 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <g>
+                        <path
+                            d="M489.229,442.468L254.563,37.135c-3.797-6.592-14.677-6.592-18.453,0L1.443,442.468c-1.92,3.307-1.92,7.36-0.021,10.667
+                        			c1.92,3.307,5.44,5.333,9.259,5.333h469.333c3.819,0,7.339-2.027,9.259-5.333C491.128,449.849,491.128,445.775,489.229,442.468z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </main>
+    <script src="js/script.js"></script>
+    <footer>
+        <div  class="container">&#169; Nikita Zhuravel, Lviv 2021</div>
+    </footer>
+</body>
+</html>

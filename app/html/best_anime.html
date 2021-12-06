@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найкращі аніме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" id="theme-link">
+    <link rel="stylesheet" href="../css/dark.css" id="theme-link">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <div class="navbar container">
+            <!-- <a href="/">
+                        <img src="img/logo.png" alt="logo">
+                    </a> -->
+            <nav class="nav">
+                <!-- <button class="m-menu"><svg width="15" height="7" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                                <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                                <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+                            </svg>
+                        </button> -->
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link">Головна</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="way_anime.html" class="menu-link">Шлях у світ аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Найкращі аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="facts_anume.html" class="menu-link">Цікаве про аніме</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Світла темна -->
+            <label for="toggle" id="theme-button">
+                <input type="checkbox" />
+            
+                <svg viewBox="0 0 100 45" width="400" height="180">
+                    <defs>
+                        <!-- rectangle used for the background and re-used in the clip and mask elements -->
+                        <rect id="background" x="0" y="0" width="90" height="40" rx="20"></rect>
+            
+                        <!-- clip cutting out the elements exceeding the rounded rectangle -->
+                        <clipPath id="clip">
+                            <use href="#background"></use>
+                        </clipPath>
+            
+                        <!-- for the light variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-light" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#8bc8f2" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- filter applied to (a copy of) the sun to blur the edges -->
+                        <filter id="blur-light">
+                            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        </filter>
+            
+                        <!-- pattern for the waves -->
+                        <pattern id="pattern-light" width="0.1" height="1" viewBox="0 0 10 45">
+                            <path fill="#40b5f8" d="M 0 0 a 6 6 0 0 0 10 0 v 45 h -10 z"></path>
+                        </pattern>
+            
+            
+                        <!-- for the dark variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-dark" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#1F2241" offset="0"></stop>
+                            <stop stop-color="#7D59DF" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- gradient used for the the mask
+                                    the idea is to have the mask use the [#000-#fff] gradient to progressively hide the shapes as they approach the bottom
+                                -->
+                        <linearGradient id="gradient-mask" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#000" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- mask to conceal the stars at the bottom of the toggle -->
+                        <mask id="mask-dark">
+                            <use fill="url(#gradient-mask)" href="#background"></use>
+                        </mask>
+            
+                        <!-- gradients for the moon and craters -->
+                        <radialGradient id="gradient-moon">
+                            <stop stop-color="#fdfdfd" offset="0.7"></stop>
+                            <stop stop-color="#e2e2e2" offset="1"></stop>
+                        </radialGradient>
+            
+                        <radialGradient id="gradient-crater">
+                            <stop stop-color="#e0e0e0" offset="0"></stop>
+                            <stop stop-color="#d9d9d9" offset="1"></stop>
+                        </radialGradient>
+            
+                        <!-- pattern for the stars -->
+                        <pattern id="pattern-dark" width="0.2" height="1" viewBox="0 0 20 45">
+                            <path fill="#fff" d="M 2 5 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 16 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 16 27 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 38 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                        </pattern>
+                    </defs>
+            
+                    <!-- actual graphics
+                                the idea is to include the elements for the light variant on top of the dark counterpart and change the opacity when the input is toggled
+                                ! beside changing the opacity of the .light elements the transition also affects the position of the sun/moon and of the patterns
+                            -->
+                    <g transform="translate(5 2.5)">
+                        <g clip-path="url(#clip)">
+                            <g class="dark">
+                                <use fill="url(#gradient-dark)" href="#background"></use>
+                                <!-- translate the stars above the toggle
+                                        ! the change in y scale allows to transition the stars with a faster pace (see the CSS)
+                                        -->
+                                <g class="background" transform="translate(0 -40) scale(1 0.4)">
+                                    <rect transform="translate(-40 0) rotate(4)" fill="url(#pattern-dark)" x="0" y="0" width="100"
+                                        height="45"></rect>
+                                </g>
+                                <use mask="url(#mask-dark)" fill="url(#gradient-dark)" href="#background"></use>
+                            </g>
+                            <g class="light">
+                                <use fill="url(#gradient-light)" href="#background"></use>
+                                <!-- translate the waves above the toggle and reset their position with an opposite translation
+                                        by translating the first group to 0 (alongside the stars) the waves are pushed below
+                                        -->
+                                <g class="background" transform="translate(-30 -20)">
+                                    <g transform="translate(30 20)">
+                                        <rect fill="url(#pattern-light)" x="-5" y="27.5" width="100" height="45"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+            
+                    <g transform="translate(77.5 22.5)">
+                        <!-- translate this group to move the sun/moon to the right -->
+                        <g class="translate" transform="translate(-55)">
+                            <!-- rotate this group to rotate the moon -->
+                            <g class="rotate" transform="rotate(-100)">
+                                <g class="dark">
+                                    <circle fill="url(#gradient-moon)" cx="0" cy="0" r="20.5"></circle>
+                                    <g transform="translate(-8 -7.5)">
+                                        <ellipse transform="rotate(-30)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="4" ry="3"></ellipse>
+                                    </g>
+                                    <g transform="translate(11 5)">
+                                        <ellipse fill="url(#gradient-crater)" stroke="#d5d5d5" stroke-width="0.2" cx="0" cy="0"
+                                            rx="3.85" ry="4"></ellipse>
+                                    </g>
+                                    <g transform="translate(-6 12)">
+                                        <ellipse transform="rotate(-10)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="2" ry="1.75"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                            <g class="light">
+                                <circle fill="#FFD21F" cx="0" cy="0" r="21" filter="url(#blur-light)"></circle>
+                                <circle fill="#FFD21F" cx="0" cy="0" r="20.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <!--Світла темна -->
+        </div>
+        <div class="name container">
+            <h1>All about anime</h1>
+        </div>
+        <p class="container p">Ти ніколи не зміниш хід речей, якщо не готовий пожертвувати всім</p>
+        <p class="container p1">аніме "Атака титанів"</p>
+    </header>
+    <!--HEADER-->
+    <main class="container">
+        <div class="about_anime">
+            <div class="four">
+                <h2>Найкращі аніме</h2>
+            </div>
+            <p>
+                Спершу пройдемось по найкращіх повнометражні аніме. Список найкращих повнометражних аніме, серед яких кожен знайде
+                собі щось до душі. Тут і трилери, і драми, і картини про
+                війну, і любові, аніме-кіберпанк і постапокаліпсіс, трохи казкових історій теж знайдеться. Є навіть стрічки, які
+                надихнули інших режисерів на створення культових фільмів.
+            </p>
+            <div class="header-h1">
+                <h1>Віднесені привидами</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 20 июля 2001
+                <br>
+                <b><i>Жанр фільму:</i></b> фентезі, пригоди
+                <br>
+                <b><i>Сейю:</i></b> Румі Хіірагі, Мію Ірино (Такао «Сад слів»), Марі Нацукі
+                <br>
+                <b><i>Режисер:</i></b> Хаяо Міядзакі
+                <br>
+                <b><i>Нагороди:</i></b> «Оскар» і «Сатурн» в 2003 як кращий анімаційний фільм, «Золотий ведмідь» Берлінського
+                кінофестивалю
+                <br>
+                <b><i>Тривалість аніме:</i></b> 125 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 8.6
+            </div>
+            
+            <div class="manga scale">
+                <img src="../img/ghosts.jpg" alt="Віднесені привидами" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Саме цю картину радять усім, хто ніколи раніше не дивився аніме. У «Віднесених примарами» більше 30 нагород, безліч
+                номінацій, журнал Empire включив стрічку в список з сотнею кращих фільмів світового кінематографа.
+            </p>
+            <br>
+            <p>
+                «Віднесені привидами» - це історія про дівчинку Тихиро, яка переїжджає разом з батьками в нове місто. По дорозі
+                сім'я
+                повертає не туди і потрапляє в якесь занедбане містечко. Прогулюючись по порожніх вулицях, мама і тато Тихиро бачать
+                на
+                магічних прилавках їжу, пробують її і перетворюються на свиней, а дівчинці доводиться кинути їх і бігти. А далі
+                починається казка з духами, відьмами, милими вуглинками, дружбою, любов'ю і драконом. Тихиро в цій картині росте і
+                змінюється, до кінця історії вона набагато сміливіше і сильніше, ніж на початку.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Віднесені привидами"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/xXEmvE4Q0uw" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Учень чудовиська</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 11 липня 2015
+                <br>
+                <b><i>Жанр фільму:</i></b> фентезі, пригоди
+                <br>
+                <b><i>Сейю:</i></b> Сета Сометані, Кодзі Якуси
+                <br>
+                <b><i>Режисер:</i></b> Мамору Хосода
+                <br>
+                <b><i>Тривалість аніме:</i></b> 119 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 7.7
+            </div>
+            <div class="manga scale">
+                <img src="../img/student.jpg" alt="Учень чудовиська" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                У місті чудовиськ Зверограде ось-ось зміниться влада. Правитель йде на спочинок, а на його місце є два кандидати:
+                Свіногор і Медвежуть. Перший - прекрасний воїн з безліччю учнів і двома синами - ідеальний варіант. Другий - боєць,
+                який
+                в битві точно укладе противника, але ось вчитися у нього ніхто не хоче, з дітьми теж не склалося - вся справа в
+                характері воїна.
+            </p>
+            <br>
+            <p>
+                В цей час в світі людей з будинку втік Рен. Зовсім недавно померла його мама, з родичами хлопчик жити не хотів, тому
+                він
+                ховався від поліцейських в темних провулках. В одному з таких виявився прохід в світ чудовиськ, там Рен зустрівся з
+                Медвежуть, який вирішив взяти хлопчика до себе і зробити з нього воїна. Ось тільки вчити боєць зовсім не вміє і
+                постійно
+                зривається через дрібниці. У Рена характер теж непростий, він хоче стати сильніше, але наставника зовсім не боїться
+                і
+                вічно з ним сперечається. Щоб домогтися успіху, героям належить навчитися розуміти один одного, адже насправді у них
+                багато спільного.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Учень чудовиська"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                <iframe width="860" height="465" src="https://www.youtube.com/embed/SvdlrDE2iNs" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>5 сантиметрів в секунду</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 3 березня 2007
+                <br>
+                <b><i>Жанр фільму:</i></b> драма, мелодрама
+                <br>
+                <b><i>Сейю:</i></b> Кендзі Мідзухасі, Йосімі Кондо, Сатомі Ханамура, Аяка Оное, Ріса Мідзуно
+                <br>
+                <b><i>Режисер:</i></b> Макото Сінкай
+                <br>
+                <b><i>Тривалість аніме:</i></b> 63 хвилини
+                <br>
+                <b><i>IMDb:</i></b> 7.6
+            </div>
+            <div class="manga scale">
+                <img src="../img/fivesecond.jpg" alt="5 сантеметрів в секунду" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Фільм з трьох історій про любов і життя, в центрі кожної - Такаки Тоно. Спочатку він школяр, який листується зі
+                своєю
+                подругою. Вони не бачилися з тих пір, як дівчина переїхала і збираються нарешті зустрітися, а на вулиці снігопад.
+                Друга
+                частина про однокласницю Такаки, яка давно закохана в нього і хоче розкрити свої почуття, а ще мріє чогось досягти.
+            </p>
+            <p>
+                У третій історії Тоно вже закінчив університет, виріс, працює і живе з дівчиною кілька років. Але він не відчуває
+                себе
+                щасливим і намагається змінити своє життя. Ніякої містики, загадок - тільки побутові історії про один людини. У цій
+                стрічці 2007 року є дроти, сніг, поїзди, небо і пелюстки сакури - все, що робить фільми Сінком такими красивими.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "5 сантеметрів в секунду"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/Q7wYaVsc61M" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Твоє ім'я</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 26 серпня 2016
+                <br>
+                <b><i>Жанр фільму:</i></b> науково-фантастичний романс
+                <br>
+                <b><i>Режисер:</i></b> Макото Сінкай
+                <br>
+                <b><i>Тривалість аніме:</i></b> 107 хвилини
+                <br>
+                <b><i>IMDb:</i></b> 8.4
+            </div>
+            <div class="manga scale">
+                <img src="../img/yourname.jpg" alt="your_name" class="scale">
+            </div>
+            <p>
+                Це барвисте аніме з елементами драми і мелодрами розповідає заплутану історію про дивний зв'язок, любові і обмін
+                тілами.
+                У центрі захоплюючих подій виявляються два головні герої - дівчина на ім'я Міцуха Міямідзу і хлопець, якого звуть
+                Таки
+                Татібана. Вона живе в невеликому провінційному містечку. Він - житель Токіо. Вони ніколи не були знайомі і ніде не
+                зустрічалися. В один прекрасний ранок обидва прокидаються з незвичним відчуттям порожнечі всередині. Міцухе в школі
+                приятелі повідомляють, що її поведінка була якимось страшним і незвичайним. Потім вдома, після спеціального ритуалу
+                зі
+                створення Кутіков-саке, наша героїня кричить на всю округу, що ненавидить цей проклятий місто і хоче жити в столиці
+                ...
+            </p>
+            <p>
+                На наступний день вона з подивом виявляє себе в тілі незнайомого хлопчика. Вона буквально переселилася в сторонньої
+                людини, яким виявився Таки ... Незабаром парочка з'ясовує, що якимось дивним чином вони можуть мінятися місцями. Їм
+                подобається ця їхня вражаюча особливість. І школярі починають систематично переселятися один в одного. Ця гра
+                здається
+                їм забавною, і молоді люди все більше часу проводять на чужому місці, живучи іншим життям, навіть не підозрюючи, до
+                чого
+                все це призведе ...
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Твоє ім'я"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/tT7b5wR0IOM" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <div class="header-h1">
+                <h1>Небесний замок Лапута</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 2 серпня 1986
+                <br>
+                <b><i>Жанр фільму:</i></b> фентезі, пригоди
+                <br>
+                <b><i>Сейю:</i></b> Кейко Йокодзава, Маюми Танака, Сукекійо Камеяма, Котое Хацуі
+                <br>
+                <b><i>Режисер:</i></b> Хаяо Міядзакі
+                <br>
+                <b><i>Тривалість аніме:</i></b> 125 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 8.0
+            </div>
+            <div class="manga scale">
+                <img src="../img/lapyta.jpg" alt="Небесний замок Лапута" class="scale"> 
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Десь в хмарах літає острів Лапута, а на ньому побудований замок. З чуток, там чи то якусь зброю масового ураження,
+                то чи
+                скарби. Подробиць ніхто не знає, тому що потрапити на острів здатний тільки людина, у якого є особливий кристал, як
+                раз
+                такий і дістався у спадок дівчинці Сіте. Вона рано залишилася без батьків і мирно росла в маленькій гірській селі,
+                поки
+                за скарбом не розпочалася полювання. Тепер героїню переслідують пірати і шукають військові. Рятуючись від них
+                дівчинка
+                потрапляє в бідний шахтарський містечко, де її знаходить і ховає у себе вдома хлопчик пазу. Він теж пов'язаний з
+                островом, колись Лапуту побачив його батько, тому пазу мріє побудувати літак і потрапити туди. Тепер цієї парочці
+                потрібно не тільки врятуватися, але і подбати про те, щоб скарби острова не дісталися переслідувачам.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Небесний замок Лапута"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/ZcycF5gis1w" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+               
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Дівчинка, яка підкорила час</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 15 липня 2006
+                <br>
+                <b><i>Жанр фільму:</i></b> фантастика, драма, мелодрама, комедія
+                <br>
+                <b><i>Сейю:</i></b> Ріїсе Нака, Такуя Ісіда, Міцутака Ітакура
+                <br>
+                <b><i>Режисер:</i></b> Мамору Хосода
+                <br>
+                <b><i>Тривалість аніме:</i></b> 98 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 7.7
+            </div>
+            <div class="manga scale">
+                <img src="../img/time.jpg" alt="Дівчинка, що підкорила час" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Макото Кінно вічно спізнюється, не знає, ким хоче стати і любить веселитися з друзями, коротше, вона звичайнісінька
+                школярка. Одного разу, дівчина заходить в дослідний кабінет, знаходить на підлозі якийсь маленький дивний предмет і
+                випадково з'ясовує, що це пристрій для переміщення в часі. Ставати супергероєм Макото навіть не думає, замість цього
+                вона змінює минуле через кожну дрібницю: довше співає в караоке, встигає смачно поїсти, зловити подачу в бейсболі,
+                добре
+                написати контрольну. Наслідки її не хвилюють, дівчина не помічає, що її переміщення шкодять іншим людям.
+                Але, виявляється, що пристрій працює не нескінченно, і коли Макото дійсно потрібно виправити свою помилку, такої
+                можливості вже не буде.
+            </p>
+            <br>
+            <p>
+                «Дівчинка, яка підкорила час» - одна з перших робіт режисера, за яку він отримав кілька премій.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Дівчинка, яка підкорила час"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/RJ4LWiPO6pg" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+               
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Навсікая з долини вітрів</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 11 березня 1984
+                <br>
+                <b><i>Жанр фільму:</i></b> фентезі, драма, пригоди
+                <br>
+                <b><i>Сейю:</i></b> Суми Сімамото («Принцеса Мононоке»), Махито Цудзімура, Хисако Кьода, Горо Ная
+                <br>
+                <b><i>Режисер:</i></b> Хаяо Міядзакі
+                <br>
+                <b><i>Тривалість аніме:</i></b> 112 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 8.1
+            </div>
+            <div class="manga scale">
+                <img src="../img/navsikaj.jpg" alt="Навсікая" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Події аніме відбуваються через тисячу років після екологічної катастрофи. Люди тепер живуть невеликими поселеннями і
+                борються за існування, всюди поширюються отруйні спори з лісу, літають комахи-мутанти, а по вимерлим містах ходять
+                сталкери в протигазах. Але навіть в таких умовах, держави продовжують воювати за ресурси.
+            </p>
+            <p>
+                Долина вітрів - невелика країна, жителі якої отримують енергію за допомогою вітряних млинів і живуть в гармонії з
+                природою, суперечки до них не долітають, комахи теж з'являються рідко. У цьому маленькому раю народилася і виросла
+                дочка
+                правителя - добра Навсикая, вона допомагає людям, любить тварин, намагається врятувати навіть величезних
+                жуків-мутантів.
+                Але щастя і гармонії приходить кінець, коли на Долину вітрів нападають.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Навсікая з долини вітрів"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                <iframe width="860" height="465" src="https://www.youtube.com/embed/UDo2sY8-W9w" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Привид в обладунках</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 23 вересня 1995
+                <br>
+                <b><i>Жанр фільму:</i></b> пригоди, фантастика, детектив
+                <br>
+                <b><i>Сейю:</i></b> Ацуко Танака, Акіо Оцука, Коїті Ямадера, Ютака Накано, Таміо Оки
+                <br>
+                <b><i>Режисер:</i></b> Мамору Осії
+                <br>
+                <b><i>Тривалість аніме:</i></b> 83 хвилини
+                <br>
+                <b><i>IMDb:</i></b> 8.0
+            </div>
+            <div class="manga scale">
+                <img src="../img/prizrak.jpg" alt="Привид в обладунках" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Аніме-кіберпанк, який надихнув Вачовські на «Матрицю», а деякі його ідеї перекочували в гру Cyberpunk 2077.
+            </p>
+            <p>
+                У далекому майбутньому після декількох світових воєн між державами вже немає кордонів, правда, і країн залишилося
+                куди
+                менше. Все стало настільки роботизоване, що люди можуть вживити собі будь-яку частину тіла і поставити мозкової
+                імплант,
+                щоб швидше міркувати і передавати дані. Це, звичайно, дуже корисно, але є і небезпека - тепер людини можна
+                «зламати», як
+                комп'ютер.
+            </p>
+            <p>
+                Саме цим займає хакер, який ховається під ім'ям Кукловод. Для скоєння злочинів він використовує своїх жертв, які
+                потім
+                все забувають. Протистоять ляльководи співробітники спеціального відділу Бюро Суспільної Безпеки. Серед них і
+                головна
+                героїня стрічки - майор Мотоко Кусанаги, тіло якої було повністю кибернетизированном.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Привид в обладунках"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/mdU8ZYxi__w?start=5" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+               
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Вовченята Аме та Юкі</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 23 вересня 1995
+                <br>
+                <b><i>Жанр фільму:</i></b> пригоди, фантастика, детектив
+                <br>
+                <b><i>Сейю:</i></b> Ацуко Танака, Акіо Оцука, Коїті Ямадера, Ютака Накано, Таміо Оки
+                <br>
+                <b><i>Режисер:</i></b> Мамору Осії
+                <br>
+                <b><i>Тривалість аніме:</i></b> 83 хвилини
+                <br>
+                <b><i>IMDb:</i></b> 8.0
+            </div>
+            <div class="manga scale">
+                <img src="../img/wolf.jpg" alt="wolf" class="scale">
+                <figcaption>Кадр з аніме-фільму</figcaption>
+            </div>
+            <p>
+                Студентка Хана зустріла в університеті хлопця, закохалася і вийшла за нього заміж - чудова романтична історія.
+                Єдиний
+                мінус - її чоловік виявився перевертнем, правда, це зовсім не напружувало Хану. У них народилася дочка Юкі, а потім
+                син
+                Аме і обидві дитини пішли в батька. І ось воно начебто щастя для всієї родини, але вовк гине під час полювання.
+                Молода
+                мати з двома перевертнями на руках перебирається подалі від міста: дітлахи гризуть меблі, ночами скиглять і
+                привертають
+                увагу сусідів. У глушині Хана ростить Аме і Юкі, не тисне на них, дозволяє вибирати що їм ближче: життя в лісі або з
+                людьми.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Вовченята Аме та Юкі"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <<iframe width="860" height="465" src="https://www.youtube.com/embed/ed1xwAtF728" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <div class="header-h1">
+                <h1>Вітер міцнішає</h1>
+            </div>
+            <div class="info">
+                <b><i>Дата прем'єри:</i></b> 20 июля 2013
+                <br>
+                <b><i>Жанр фільму:</i></b> драма, повсякденність
+                <br>
+                <b><i>Сейю:</i></b> Хідеакі Анно (режисер «Евангеліона»), Міорі Такимото
+                <br>
+                <b><i>Режисер:</i></b> Хаяо Міядзакі
+                <br>
+                <b><i>Тривалість аніме:</i></b> 126 хвилин
+                <br>
+                <b><i>IMDb:</i></b> 7.8
+            </div>
+            <div class="manga scale">
+                <img src="../img/veter.jpg" alt="veter" class="scale">
+                <figcaption>Постер до аніме-фільму</figcaption>
+            </div>
+            <p>
+                Маленький Дзіро Хорікосі точно знає, що літаки - перш за все. Він бачить їх у снах і мріє одного дня стати пілотом,
+                але
+                у нього жахливе зір, з таким в льотне не беруть. Зате конструювати літаки можна, тому Дзіро уколює, готуючись стати
+                інженером, він хоче, щоб його винаходи були красивими і переносили людей, а не бомби. Слідуючи за мрією, він
+                переїжджає
+                в Токіо, зустрічає свою любов, вчиться в університеті, працює на заводі, а вітер постійно дме і підштовхує його
+                вперед.
+            </p>
+            <p>
+                Аніме по манзі Міядзакі, створюючи її режисер надихнувся біографією японського авіаконструктора Дзіро Хорікосі. Але,
+                звичайно, багато в цій стрічці Міядзакі додумав сам.
+            </p>
+            <div class="video">
+                <span>
+                    Трейлер "Вітер міцнішає"
+                </span>
+                <br>
+                <div class="thumb-wrap">
+                    <iframe width="860" height="465" src="https://www.youtube.com/embed/V9B52SuFpQI" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            <br>
+            <br>
+            <p>
+                А зараз буде представлено аніме-серіали, де кожен занайде на свій смак.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Зошит смерті</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2006 – 2007
+                <br>
+                <b><i>Жанр:</i></b> фентезі, трилер, драма, кримінал
+                <br>
+                <b><i>Режисери:</i></b> Тецуро Аракі, Томохіко Іто, Хіроюкі Цутія
+                <br>
+                <b><i>IMDb:</i></b> 9.0
+            </div>
+            <div class="manga scale">
+                <img src="../img/deat.jpg" alt="death" class="scale">
+            </div>
+            <p>
+                Це японський 37-серійний телесеріал, заснований на однойменній манзі Цугуми Обидва і Такесі Обати. У центрі історії
+                -
+                школяр Лайт Ягами, який знайшов Зошит смерті, підкинуту в наш світ нудьгуючим богом Рюком. Вирішивши, що в світі
+                гідні
+                жити тільки законослухняні і добрі люди, Лайт починає вписувати в зошит імена всіх злочинців, про які пишуть ЗМІ.
+            </p>
+            <p>
+                «Зошит смерті» займає місце в списку кращого аніме всіх часів через свого захоплюючого сюжету і динамічною сюжетною
+                лінії, що не розпорошується на безліч побічних відгалужень і залишається вірною основної концепції. Ще один цікавий
+                момент: замість загального сюжету про слабак, який поступово перетворюється в героя через тренування і пригоди, у
+                нас є
+                персонаж, який починає як герой і поступово стає лиходієм.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Красуня-воїн Сейлормун</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 1992 - 1997
+                <br>
+                <b><i>Жанр:</i></b> фентезі, бойовик, драма, мелодрама, комедія
+                <br>
+                <b><i>Режисери:</i></b> Куніхіко Ікухара, Дзюн'іті Сато, Такуя Ігарасі
+                <br>
+                <b><i>IMDb:</i></b> 7.7
+            </div>
+            <div class="manga scale">
+                <img src="../img/moon.jpg" alt="moon" class="scale">
+            </div>
+            <p>
+                Цей 200-серійний серіал більше, ніж сума його і без того фантастичних частин, з чудовою анімацією, надихає історією
+                дружби і любові, з багатою міфологією. і персонажами, у кожного з яких, включаючи лиходіїв, є свої переваги і
+                недоліки,
+                цілі і характер.
+            </p>
+            <p>
+                Головні героїні - Усагі Цукіні, Рей Хино, Амі Мідзуно, Макото Кіно, Мінако Айно і загадковий Такседо Маск -
+                використовують різні сили, якими наділили їх планети-покровительки. Вони без вагань готові пожертвувати своїм життям
+                заради захисту Землі від Темного Королівства (в кожному сезоні будуть свої лиходії).
+            </p>
+            <p>
+                «Сейлор Мун» витримала випробування часом як основне аніме, з якого еволюціонували багато сучасних аніме про
+                дівчаток-чарівниць.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Темний дворецький</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2008 - 2010
+                <br>
+                <b><i>Жанр:</i></b> драма, комедія, кримінал, детектив
+                <br>
+                <b><i>Режисери:</i></b> Хирофумі Огура, Тосія Сінохара
+                <br>
+                <b><i>IMDb:</i></b> 7.8
+            </div>
+            <div class="manga scale">
+                <img src="../img/dark.jpg" alt="dark" class="scale">
+            </div>
+            <p>
+                Це ідеальна комбінація детектива, драми і комедії, яка до того ж відрізняється непередбачуваними поворотами, і
+                передає
+                красу готичної вікторіанської естетики.
+            </p>
+            <p>
+                Головні герої - Сиель - дорослий розум в чарівному дитячому тілі, і його дворецький Себастьян, який занадто гарний і
+                хитрий для людини. У кожного з них є свої мотиви для співпраці, а на шляху до кінцевої мети їм доведеться зіткнутися
+                з
+                безліччю темних, забавних і жорстоких персонажів.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Драконівські перли</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 1986 - 1989
+                <br>
+                <b><i>Жанр:</i></b> фентезі, бойовик, трилер, комедія
+                <br>
+                <b><i>Режисери:</i></b> Даісуке Нісіо, Мінору Окадзакі, Кадзухіса Такеноті
+                <br>
+                <b><i>IMDb:</i></b> 8.5
+            </div>
+            <div class="manga scale">
+                <img src="../img/drakon.jpg" alt="drakon" class="scale">
+            </div>
+            <p>
+                Сюжет серіалу не назвеш глибоким, так як він в основному обертається навколо майстра бойових мистецтв Гоку і його
+                друзів, які відчувають свої сили проти все більш потужною і дивовижної серії ворогів.
+            </p>
+            <p>
+                Але те, що «Драконівські перли» не вистачає в плані сюжету, з лишком компенсується гумором, химерними персонажами і
+                неймовірним екшном. Як можна не отримати задоволення від фентезі про бойові мистецтва, де більшість персонажів
+                досить
+                сильні, щоб руйнувати планети голими руками?
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Наруто</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2002 - 2007
+                <br>
+                <b><i>Жанр:</i></b> бойовик, фентезі, комедія
+                <br>
+                <b><i>Режисери:</i></b> Хаято Дате, Харуме Косака, Рион Кудзйо
+                <br>
+                <b><i>IMDb:</i></b> 8.3
+            </div>
+            <div class="manga scale">
+                <img src="../img/naruto.jpg" alt="naruto" class="scale">
+            </div>
+            <p>
+                Багаторічний аніме-серіал «Наруто» став культовим через свою шаленої популярності у всьому світі, і не дарма. Він
+                сповнений динамічних боїв, веселих моментів і драматичних сцен, які змусять стиснутися ваше серце.
+            </p>
+            <p>
+                Головному герою належить пройти дуже довгий шлях, щоб стати Хокаге - главою свого селища і найсильнішим з усіх
+                ніндзя. А
+                їх в серіалі дуже багато!
+            </p>
+            <p>
+                У «Наруто: Ураганні хроніки» історія бере більш похмурий і серйозний тон, оскільки персонажі стають старше і
+                стикаються
+                з ще більш серйозними проблемами.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Моя геройська академія</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2016 - н.ч.
+                <br>
+                <b><i>Жанр:</i></b> бойовик, фентезі, комедія
+                <br>
+                <b><i>Режисери:</i></b> Хаято Дате, Харуме Косака, Рион Кудзйо
+                <br>
+                <b><i>IMDb:</i></b> 8.3
+            </div>
+            <div class="manga scale">
+                <img src="../img/akademiaj.jpg" alt="akademiaj" class="scale">
+            </div>
+            <p>
+                Історій про супергероїв - хоч греблю гати, але «Моя геройська академія» пропонує унікальний поворот в знайомому
+                жанрі,
+                зосереджуючись на героя, який народився без СУПЕРСИЛИ в світі, повному людей з великими силами.
+            </p>
+            <p>
+                Завдяки приголомшливій анімації, значному переліку добре опрацьованих другорядних персонажів і таланту придумувати
+                одні
+                з найбільш безглуздих і унікальних суперсил, коли-небудь з'являлися на екрані, «Моя геройська академія» - одне з
+                кращих
+                аніме, які варто подивитися.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Ван Піс</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 1999 - н.ч.
+                <br>
+                <b><i>Жанр:</i></b> фентезі, бойовик, драма, мелодрама, пригоди
+                <br>
+                <b><i>Режисери:</i></b> Сакаї Мунехіса, Коносуке Уда, Хироаки Міямото
+                <br>
+                <b><i>IMDb:</i></b> 8.7
+            </div>
+            <div class="manga scale">
+                <img src="../img/van-pis.jpg" alt="van-pis" class="scale">
+            </div>
+            <p>
+                Є причина, по якій «Ван Піс» стабільно тримається в топ кращих аніме-серіалів з 1999 року і породив всілякі
+                театральні
+                та телевізійні «побічні ефекти».
+            </p>
+            <p>
+                Ми просто не можемо насититися веселою і захоплюючою сагою про гнучкий піратському капітана Манка Д. Луффі і його
+                постійному прагненні стати наступним Королем піратів.
+            </p>
+            <p>
+                А ще в світі «Ван Піс» є диявольські фрукти, які дають суперсилу тим, хто їх їсть. Сцени потужних боїв між
+                пожирателями
+                диявольських фруктів, включаючи Луффі, просто приголомшують.
+            </p>
+            <p>
+                Сюжет серіалу нескінченно захоплюючий, але саме незвичайні, яскраві і численні персонажі - це те, що найсильніше
+                чіпляє
+                протягом 956 епізодів (і їх кількість продовжує зростати, а всього планується випустити 1682 серій).
+            </p>
+            <div class="header-h1">
+                <h1>Сталевий алхімік: Братство</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2009 - 2010
+                <br>
+                <b><i>Жанр:</i></b> бойовик, пригоди, драма, фентезі
+                <br>
+                <b><i>Режисери:</i></b> Ясухіро Іріе, Iкура Сато, Кійоміцу
+                <br>
+                <b><i>IMDb:</i></b> 9.1
+            </div>
+            <div class="manga scale">
+                <img src="../img/alhimik.jpg" alt="alhimik" class="scale">
+            </div>
+            <p>
+                Складне побудова світу з уравновешиванием запам'ятовуються персонажів, знакових моментів і захоплюючих боїв - то, що
+                робить «Сталевого алхіміка» видатним аніме всіх часів.
+            </p>
+            <p>
+                І вступний квиток в цей великий світ - співчуття. Ми розуміємо, чому брати Елрікам практикували заборонену алхімію,
+                намагаючись воскресити свою покійну матір. І незважаючи на те, що божественне втручання вдарило їх по обличчю,
+                сказавши
+                їм «ні», брати продовжують пошуки втраченого. Це прагнення прокладає героям шлях крізь світ монстрів, урядових змов
+                і
+                божественності.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Покемон</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 1997 - н.ч.
+                <br>
+                <b><i>Жанр:</i></b> комедія, сімейний, дитячий, фантастика
+                <br>
+                <b><i>Режисери:</i></b> Куніхіко Юяма, Норіхіко Судо, Масаміцу Хідака
+                <br>
+                <b><i>IMDb:</i></b> 7.6
+            </div>
+            <div class="manga scale">
+                <img src="../img/pokemon.png" alt="pokemon" class="scale">
+            </div>
+            <p>
+                Можливо, ви давно переросли це аніме, але не можна заперечувати його вплив на аніме-індустрію і масову культуру в
+                цілому
+                (згадаємо хоча б надпопулярним гру для гаджетів Pokémon Go). Вперше воно було показано в Японії в 1997 році, і
+                випуск
+                нових серій триває донині.
+            </p>
+            <p>
+                Сюжет аніме по-дитячому простий: хлопчик Сатоши (він же Еш Кетчум в англійському дубляжі) подорожує по всьому світу
+                з
+                різними покемонами, такими як Пікачу, щоб стати найкращим майстром покемонів.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Клинок, що знищує демонів</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2019 - н.ч.
+                <br>
+                <b><i>Жанр:</i></b> бойовик, фентезі
+                <br>
+                <b><i>Режисери:</i></b> Харуо Сотодзакі
+                <br>
+                <b><i>IMDb:</i></b> 8.7
+            </div>
+            <div class="manga scale">
+                <img src="../img/demon_slayer.jpg" alt="pokemon" class="scale">
+            </div>
+            <p>
+                Це нове аніме, що з'явилося в 2019 році, вже встигло увійти в історію кращих аніме-серіалів завдяки дивного якості
+                графіку, чудовій саундтреку і, що найголовніше, сюжету, в якому гармонійно поєднуються драма, фентезі, екшн і гумор.
+            </p>
+            <p>
+                Сцени битв між винищувачами демонів і унікальними персонажами-демонами дуже атмосферний і красиво промальовані. У
+                цьому
+                аніме чудово розкрито минуле і біографія кожного персонажа, включаючи навіть лиходіїв.
+            </p>
+            <p>
+                Дія аніме відбувається в період Тайсе (1912-1926) в Японії, де демони існують разом з людьми. Головний герой
+                Тандзіро
+                Камадо виявляє, що його сім'я була убита в результаті нападу демонічної істоти, і тільки його сестра Незуко вижила,
+                але
+                перетворилася на демона. Він вирішує стати вбивцею демонів, і знайти спосіб перетворити сестру назад в людини.
+            </p>
+            <br>
+            <div class="header-h1">
+                <h1>Атака титанів</h1>
+            </div>
+            <div class="info">
+                <b><i>Роки виходу:</i></b> 2013 - н.ч.
+                <br>
+                <b><i>Жанр:</i></b> драма, бойовик, фантастика, фентезі
+                <br>
+                <b><i>Режисери:</i></b> Тецуро Аракі, Масаси Коедзука, Хіроюкі Танака
+                <br>
+                <b><i>IMDb:</i></b> 8.8
+            </div>
+            <div class="manga scale">
+                <img src="../img/titan.jpg" alt="titan" class="scale">
+            </div>
+            <p>
+                Заснований на однойменній манзі, створеної Хадзіме Исаямою, серіал поєднує в собі бойовик, фантастику і
+                постапокаліптичне дійство. Він жорстокий, кривавий і разом з тим захоплюючий, інтригуючий і не дасть вам спати по
+                ночах,
+                в очікуванні розв'язки.
+            </p>
+            <p>
+                Дія «Атаки титанів» відбувається в світі, де людство живе в містах, оточених величезними стінами, що захищають їх
+                від
+                гігантських гуманоїдів-людожерів, які називаються титанами. Ерен Йегер, мати якого загинула під час нападу титанів,
+                клянеться очистити світ від цих монстрів.
+            
+            </p>
+            <p>
+                Заради своєї мети Ерен і його друзі приєднуються до Разведкорпусу, елітної групи солдатів, які борються з титанами.
+            </p>
+        </div>
+        <a href="#" id="toTop">
+            <svg width="10pt" height="10pt" viewBox="0 0 630 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <g>
+                        <path
+                            d="M489.229,442.468L254.563,37.135c-3.797-6.592-14.677-6.592-18.453,0L1.443,442.468c-1.92,3.307-1.92,7.36-0.021,10.667
+        			c1.92,3.307,5.44,5.333,9.259,5.333h469.333c3.819,0,7.339-2.027,9.259-5.333C491.128,449.849,491.128,445.775,489.229,442.468z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/script2.js"></script>
+    <footer>
+        <div class="container">&#169; Nikita Zhuravel, Lviv 2021</div>
+    </footer>
+</body>
+</html>

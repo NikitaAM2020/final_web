@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цікаве про аніме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark.css" id="theme-link">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <div class="navbar container">
+            <!-- <a href="/">
+                            <img src="img/logo.png" alt="logo">
+                        </a> -->
+            <nav class="nav">
+                <!-- <button class="m-menu"><svg width="15" height="7" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                                    <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                                    <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+                                </svg>
+                            </button> -->
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link">Головна</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="way_anime.html" class="menu-link">Шлях у світ аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="best_anime.html" class="menu-link">Найкращі аніме</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Цікаве про аніме</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Світла темна -->
+            <label for="toggle" id="theme-button">
+                <input type="checkbox" />
+            
+                <svg viewBox="0 0 100 45" width="400" height="180">
+                    <defs>
+                        <!-- rectangle used for the background and re-used in the clip and mask elements -->
+                        <rect id="background" x="0" y="0" width="90" height="40" rx="20"></rect>
+            
+                        <!-- clip cutting out the elements exceeding the rounded rectangle -->
+                        <clipPath id="clip">
+                            <use href="#background"></use>
+                        </clipPath>
+            
+                        <!-- for the light variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-light" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#8bc8f2" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- filter applied to (a copy of) the sun to blur the edges -->
+                        <filter id="blur-light">
+                            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                        </filter>
+            
+                        <!-- pattern for the waves -->
+                        <pattern id="pattern-light" width="0.1" height="1" viewBox="0 0 10 45">
+                            <path fill="#40b5f8" d="M 0 0 a 6 6 0 0 0 10 0 v 45 h -10 z"></path>
+                        </pattern>
+            
+            
+                        <!-- for the dark variant -->
+                        <!-- gradient used for the background -->
+                        <linearGradient id="gradient-dark" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#1F2241" offset="0"></stop>
+                            <stop stop-color="#7D59DF" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- gradient used for the the mask
+                                    the idea is to have the mask use the [#000-#fff] gradient to progressively hide the shapes as they approach the bottom
+                                -->
+                        <linearGradient id="gradient-mask" x1="0" x2="0" y1="0" y2="1">
+                            <stop stop-color="#000" offset="0"></stop>
+                            <stop stop-color="#fff" offset="1"></stop>
+                        </linearGradient>
+            
+                        <!-- mask to conceal the stars at the bottom of the toggle -->
+                        <mask id="mask-dark">
+                            <use fill="url(#gradient-mask)" href="#background"></use>
+                        </mask>
+            
+                        <!-- gradients for the moon and craters -->
+                        <radialGradient id="gradient-moon">
+                            <stop stop-color="#fdfdfd" offset="0.7"></stop>
+                            <stop stop-color="#e2e2e2" offset="1"></stop>
+                        </radialGradient>
+            
+                        <radialGradient id="gradient-crater">
+                            <stop stop-color="#e0e0e0" offset="0"></stop>
+                            <stop stop-color="#d9d9d9" offset="1"></stop>
+                        </radialGradient>
+            
+                        <!-- pattern for the stars -->
+                        <pattern id="pattern-dark" width="0.2" height="1" viewBox="0 0 20 45">
+                            <path fill="#fff" d="M 2 5 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 16 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 16 27 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                            <path fill="#fff" d="M 10 38 l 1 1 l -1 1 l -1 -1 l 1 -1"></path>
+                        </pattern>
+                    </defs>
+            
+                    <!-- actual graphics
+                                the idea is to include the elements for the light variant on top of the dark counterpart and change the opacity when the input is toggled
+                                ! beside changing the opacity of the .light elements the transition also affects the position of the sun/moon and of the patterns
+                            -->
+                    <g transform="translate(5 2.5)">
+                        <g clip-path="url(#clip)">
+                            <g class="dark">
+                                <use fill="url(#gradient-dark)" href="#background"></use>
+                                <!-- translate the stars above the toggle
+                                        ! the change in y scale allows to transition the stars with a faster pace (see the CSS)
+                                        -->
+                                <g class="background" transform="translate(0 -40) scale(1 0.4)">
+                                    <rect transform="translate(-40 0) rotate(4)" fill="url(#pattern-dark)" x="0" y="0" width="100"
+                                        height="45"></rect>
+                                </g>
+                                <use mask="url(#mask-dark)" fill="url(#gradient-dark)" href="#background"></use>
+                            </g>
+                            <g class="light">
+                                <use fill="url(#gradient-light)" href="#background"></use>
+                                <!-- translate the waves above the toggle and reset their position with an opposite translation
+                                        by translating the first group to 0 (alongside the stars) the waves are pushed below
+                                        -->
+                                <g class="background" transform="translate(-30 -20)">
+                                    <g transform="translate(30 20)">
+                                        <rect fill="url(#pattern-light)" x="-5" y="27.5" width="100" height="45"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+            
+                    <g transform="translate(77.5 22.5)">
+                        <!-- translate this group to move the sun/moon to the right -->
+                        <g class="translate" transform="translate(-55)">
+                            <!-- rotate this group to rotate the moon -->
+                            <g class="rotate" transform="rotate(-100)">
+                                <g class="dark">
+                                    <circle fill="url(#gradient-moon)" cx="0" cy="0" r="20.5"></circle>
+                                    <g transform="translate(-8 -7.5)">
+                                        <ellipse transform="rotate(-30)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="4" ry="3"></ellipse>
+                                    </g>
+                                    <g transform="translate(11 5)">
+                                        <ellipse fill="url(#gradient-crater)" stroke="#d5d5d5" stroke-width="0.2" cx="0" cy="0"
+                                            rx="3.85" ry="4"></ellipse>
+                                    </g>
+                                    <g transform="translate(-6 12)">
+                                        <ellipse transform="rotate(-10)" fill="url(#gradient-crater)" stroke="#d5d5d5"
+                                            stroke-width="0.2" cx="0" cy="0" rx="2" ry="1.75"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                            <g class="light">
+                                <circle fill="#FFD21F" cx="0" cy="0" r="21" filter="url(#blur-light)"></circle>
+                                <circle fill="#FFD21F" cx="0" cy="0" r="20.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <!--Світла темна -->
+        </div>
+        <div class="name container">
+            <h1>All about anime</h1>
+        </div>
+        <p class="container p">Ніколи не здаватися... Ось моя магія!</p>
+        <p class="container p1">аніме "Чорна конюшина"</p>
+    </header>
+    <!--HEADER-->
+    <main class="container">
+        <div class="about_anime">
+            <div class="four">
+                <h2>Цікаве про аніме</h2>
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 1</h2>
+            </div>
+            <p>
+                60 відсотків всієї анімації, що існує на нашій планеті, - це японське аніме.
+            </p>
+            <div class="manga scale">
+                <img src="../img/foul.jpg" alt="foul" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 2</h2>
+            </div>
+            <p>
+                Рисовку волосся і тіла в аніме придумали японці, а стиль очей був скопійований у Уолта Діснея, чого японці, до
+                речі, не
+                заперечують.
+            </p>
+            <div class="manga scale">
+                <img src="../img/eays.jpg" alt="eays" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 3</h2>
+            </div>
+            <p>
+                За негласним законом аніме, чим важливіше герой, тим детальніше йому прорисовують очі.
+            </p>
+            <div class="manga scale">
+                <img src="../img/animeeays.jpg" alt="eays" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 4</h2>
+            </div>
+            <p>
+                В Японії на друк манги витрачається більше паперу, ніж на виробництво туалетних рулонів.
+            </p>
+            <div class="manga scale">
+                <img src="../img/paper.jpg" alt="paper" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 5</h2>
+            </div>
+            <p>
+                На відміну від американських і європейських коміксів, які читають в основному підлітки, манга створюється для
+                людей
+                будь-якого віку.
+            </p>
+            <div class="manga scale">
+                <img src="../img/old.jpg" alt="old" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 6</h2>
+            </div>
+            <p>
+                В Японії термін «отаку» використовується в негативному ключі для опису людей, які чимось одержимі.
+            </p>
+            <div class="manga scale">
+                <img src="../img/otaky.jpg" alt="otaky" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 7</h2>
+            </div>
+            <p>
+                Існує правило, з якого ще не було винятків: якщо по манзі виходить аніме, продажу першої зростають як мінімум на
+                10
+                відсотків. В середньому - на 30-40, а в разі «Атаки Титанів» і зовсім на 70. Тобто можна випустити отстойненькую
+                мангу,
+                зняти по ній отстойненькій серіал і - профіт! - купатися в золоті.
+            </p>
+            <div class="manga scale">
+                <img src="../img/ataka.jpg" alt="ataka" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 8</h2>
+            </div>
+            <p>
+                Колір волосся в аніме підбирається НЕ рандомно. Тут все хитро і продумано: колір волосся вказує на певні риси
+                особистості героя.
+            </p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Червоний</b> - люблять пригоди, пристрасні;</li>
+                <li class="list-group-item"><b>Зелений</b> - толерантні, тихі, м'які, іноді заздрісні, але не агресивні;</li>
+                <li class="list-group-item"><b>Білий</b> - знаковий, втілює зв'язок з космосом, зрілість, персонаж існує як би
+                    поза світом людей;</li>
+                <li class="list-group-item"><b>Фіолетовий</b> самий знаковий, втілює зв'язок з космосом, зрілість, персонаж
+                    існує як би поза світом людей;</li>
+                <li class="list-group-item"><b>Блакитний</b> - інтелектуально розвинені, розум домінує над почуттями, ввічливі,
+                    спокійні, сором'язливі;</li>
+                <li class="list-group-item"><b>Рожевий</b> - завжди чимось виділяються з натовпу, гарячі в бою, не чули про
+                    правила і умовності;</li>
+                <li class="list-group-item"><b>Рудий</b> - хитрі, темпераментні, бесоватие;</li>
+                <li class="list-group-item"><b>Коричневий</b> - м'які, зворушливі, не здатні образити, часто з трагічним
+                    минулим;</li>
+                <li class="list-group-item"><b>Синій</b> - залізно дисципліновані, стійкі, спокійні, стримують почуття.</li>
+            </ul>
+            <div class="manga scale">
+                <img src="../img/color.jpg" alt="color" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 9</h2>
+            </div>
+            <p>
+                «Привид в обладунках» дуже сильно вплинув на кінематограф. Він надихнув Вачовські на створення «Матриці»,
+                здорово
+                підштовхнув у розвитку сай-фай, а Кемерон і Спілберг не приховують, що не по-дитячому фанатіють від фільму і
+                швидше
+                переглянуть його, ніж витратять час на якийсь очікуваний блокбастер.
+            </p>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 10</h2>
+            </div>
+            <p>
+                «Покемон» спочатку був грою для GameBoy. Тільки потім підтяглися манга і аніме.
+            </p>
+            <div class="manga scale">
+                <img src="../img/pokemongame.jpg" alt="pokemongame" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 11</h2>
+            </div>
+            <p>
+                Найдовший аніме-серіал - це «Садзае-сан», який виходить з 1969 року і до цього дня. У ньому більше 7 тисяч серій!
+                «Санта-Барбара», для порівняння, майже в 3,5 рази коротше.
+            </p>
+            <div class="manga scale">
+                <img src="../img/sedze.jpg" alt="sedze" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 12</h2>
+            </div>
+            <p>
+                «Зошит смерті» була заборонена в Китаї, так як місцеві фанати цього аніме почали масово купувати зошити і
+                вписувати туди
+                імена всіх, кого ненавиділи, в надії, що вони помруть.
+            </p>
+            <div class="manga scale">
+                <img src="../img/notr.jpg" alt="notr" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 13</h2>
+            </div>
+            <p>
+                Спочатку Масаши Кишимото, автор «Наруто», не планував створювати Саске. Він з'явився несподівано для самого
+                Масаши:
+                видавець наполіг на тому, щоб в історії з'явився таємничий і загадковий bad-ass.
+            </p>
+            <div class="manga scale">
+                <img src="../img/saske.jpg" alt="saske" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 14</h2>
+            </div>
+            <p>
+                Видавець «Ван Піс» боявся, що серія не проживе і 5 років. Тим часом за вікном 2021 - 24 рік існування манги.
+            </p>
+            <div class="manga scale">
+                <img src="../img/van.jpg" alt="van" class="scale">
+            </div>
+            <br>
+            <div class="header-h2-left">
+                <h2>Факт 15</h2>
+            </div>
+            <p>
+                Найкасове аніме - «Віднесені примарами» Хаяо Міядзакі. У світовому прокаті фільм зібрав $ 275 мільйонів.
+            </p>
+            <div class="manga scale">
+                <img src="../img/tihiro.jpg" alt="tihiro" class="scale">
+            </div>
+            <br>
+        </div>
+        <a href="#" id="toTop">
+            <svg width="10pt" height="10pt" viewBox="0 0 630 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <g>
+                        <path
+                            d="M489.229,442.468L254.563,37.135c-3.797-6.592-14.677-6.592-18.453,0L1.443,442.468c-1.92,3.307-1.92,7.36-0.021,10.667
+                			c1.92,3.307,5.44,5.333,9.259,5.333h469.333c3.819,0,7.339-2.027,9.259-5.333C491.128,449.849,491.128,445.775,489.229,442.468z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/script2.js"></script>
+    <footer>
+        <div class="container">&#169; Nikita Zhuravel, Lviv 2021</div>
+    </footer>
+</body>
+</html>

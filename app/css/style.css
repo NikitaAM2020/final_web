@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-bg) ;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    width: 90%;
+}
+.header{
+    padding-bottom: 60px;
+    background: var(--header);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.nav {
+    position: relative;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    margin-left: 17px;
+}
+.menu-item{
+    margin-right: 25px;
+}
+.menu-link{
+    color: #ece98ee3;
+    text-decoration: none;
+}
+.name h1{
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+    /* position: relative; */
+    text-align: center;
+    text-align: center;
+    /* display: inline-block; */
+    margin: 0;
+    line-height: 1;
+    color: rgba(27, 27, 26, 0.8);
+    letter-spacing: 10px;
+    font-size: 70px;
+    padding: .7em 1em .85em;
+}
+.p{
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #002;
+}
+.p1{
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #002;
+}    
+.four {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.four h2 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  color: #c9c760;
+  font-size: 50px;
+  font-weight: normal;
+  padding: 8px 20px 7px 20px;
+  border-top: 4px solid;
+  border-left: 4px solid;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+}
+
+.four h2:before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: -28px;
+  left: -28px;
+  border: 4px solid #c9c760;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 450px) {
+  .four h2 {
+    font-size: 36px;
+  }
+  .four h2:before {
+    width: 20px;
+    height: 20px;
+    top: -20px;
+    left: -20px;
+  }
+}
+.about_anime p {
+  font-size: 17px;
+  margin: 8px 0;
+  text-align: justify;
+}
+.manga {
+  text-align: center;
+}
+.manga img {
+  width: 85%;
+  height: auto;
+}
+figcaption {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.video {
+  text-align: center;
+  font-weight: 600;
+  font-size: 19px;
+}
+footer {
+  background: linear-gradient(90deg, rgba(162, 185, 50, 0.41) 0%, var(--main-bg) 85.62%);
+  padding: 0 0 0 70px;
+}
+.header-h1 h1 {
+  position: relative;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #a2a027;
+}
+
+.header-h1 h1:before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #a2a027;
+  bottom: .25rem;
+  left: 50%;
+  width: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header-h1 h1:after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #a2a027;
+  bottom: 0;
+  left: 50%;
+  width: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.info {
+  font-size: 19px;
+  text-align: justify;
+}
+#toTop {
+	position: fixed;
+	display: inline-block;
+	bottom: 30px;
+	right: -40px;
+	width: 40px;
+	height: 40px;
+	z-index: 1000;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	background:linear-gradient(135deg, rgba(162, 185, 50, 0.41) 0%, #7d7b00 80.62%);
+	box-shadow: 0 0 0 3px rgba(0,1,2,.3);
+	opacity: 0;
+	visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+#toTop:hover {
+		background: #a2a027;
+}
+
+#toTop svg {
+	position: relative;
+	top: 10px;
+	right: -1px;
+	fill: #fff;
+	transition: all .3s ease-in-out;
+}
+
+#toTop:hover svg {
+	cursor: pointer;
+	fill: #fff;
+	transition: all .3s ease-in-out;
+}
+
+#toTop.show {
+	opacity: 1;
+	visibility: visible;
+	right: calc(2%);
+}
+
+.header-h2-left {
+  position: relative;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.header-h2-left h2 {
+  display: inline-block;
+  background: var(--main-bg);
+  margin-bottom: 0;
+  padding: 0.25rem .875rem;
+  border-left: .125rem solid #a2a027;
+  border-right: .125rem solid #a2a027;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #7d7800;
+}
+
+.header-h2-left h2:after {
+  content: "";
+  position: absolute;
+  background: #a2a027;
+  height: .135rem;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -999;
+}
+
+.header-h2-left {
+  text-align: left;
+}
+
+.header-h2-left h2 {
+  padding-left: 0;
+  border-left: none;
+}
+.list-group-item{
+  background-color: var(--main-bg);
+}
+a:hover{
+  color:#7d7800;
+}
+a:active{
+  color:#666301;
+}
+
+:root {
+  --main-bg: #fffff7;
+  --text-color: #002;
+  --header: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, var(--main-bg) 85.62%), url(../img/all.png) no-repeat center top / cover;
+}
+label {
+  position: relative;
+}
+label input {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+label svg {
+  width: 70px;
+  height: auto;
+  display: block;
+}
+/* include transitions for the elements modified as the input is checked */
+label input + svg .light {
+  transition: opacity 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+}
+label input + svg .translate,
+label input + svg .rotate,
+label input + svg .background,
+label input + svg .astronaut,
+label input + svg .surfer {
+  transition: transform 0.75s cubic-bezier(0.68, 0.25, 0.265, 1);
+}
+/* make the .light element fully transparent to have the .dark variant see through */
+label input:checked + svg .light {
+  opacity: 0;
+}
+/* translate the sun/moon toward the right (by default it is pushed back with a negative translation) */
+label input:checked + svg .translate {
+  transform: translateX(0px);
+}
+/* rotate the moon (by default it is rotated counter-clockwise) */
+label input:checked + svg .rotate {
+  transform: rotate(0deg);
+}
+/* translate the scale the backgrounds to 0
+this is rather neat, so meant an extra comment
+- the light background is positioned with two groups, one pushing it below the graphic, one back up; by removing the translation of this last group the background "returns" below the toggle
+- the dark background is positioned above and with a smaller vertical scale; by removing the translation it is placed in full view and by increasing its scale it's as if the stars would tumble down with different rates
+*/
+label input:checked + svg .background {
+  transform: translate(0px) scale(1);
+}
+
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+.scale {
+  /* display: inline-block; Строчно-блочный элемент */
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.scale img {
+  transition: 1s; /* Время эффекта */
+  /* display: block; Убираем небольшой отступ снизу */
+}
+.scale img:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
